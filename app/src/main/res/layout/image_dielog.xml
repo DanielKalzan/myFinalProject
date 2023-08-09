@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="200dp"
+    android:background="#D7F1FD"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="בחר תמונה מ..."
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/gallery"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/gallery_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gallery"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="גלריה"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/camera"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="150dp"/>
+
+    <TextView
+        android:id="@+id/Camera_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gallery"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="5dp"
+        android:text="מצלמה"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

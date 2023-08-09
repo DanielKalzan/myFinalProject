@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#1C658C">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/hebrewfont"
+            android:text="ברוך הבא"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_daniel_gas_company"
+        android:fontFamily="@font/hebrewfont"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        />
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="#398AB9"
+        android:onClick="openLogin"
+        android:text="@string/login"
+        android:textSize="25sp"
+        app:backgroundTint="@null" />
+    <TextView
+        android:id="@+id/TV_or"
+        android:layout_below="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="או"
+        android:fontFamily="@font/hebrewfont"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TV_or"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="#398AB9"
+        android:onClick="openSignup"
+        android:text="@string/signup"
+        android:textSize="25sp"
+        app:backgroundTint="@null" />
+
+
+    <com.braintreepayments.cardform.view.CardForm
+        android:id="@+id/card_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        />
+
+
+</RelativeLayout>

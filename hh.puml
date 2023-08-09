@@ -1,0 +1,234 @@
+@startuml
+class com.example.my_final_project.UpdatePage {
+~ TextInputEditText editPassword
+~ ImageView backHome
+~ Dialog imageDialog
+~ Uri imageUri
+~ TextView editBtn
+~ DBuser dBuser
+~ String emailPattern
+# void onCreate(Bundle)
+- void findUser()
+- void findView(String)
+- void openDialog()
+- void openCamera()
+- void openGallery()
+# void onActivityResult(int,int,Intent)
+- void CheckDetails(String,ImageView)
++ void openLoginDialog()
++ {static} byte[] imageViewToBy(ImageView)
++ void onBackPressed()
++ void Exit()
+}
+class com.example.my_final_project.SignupPage {
+~ ImageView userImage
+~ Dialog imageDialog
+~ Uri imageUri
+~ TextInputEditText SignupUsername
+~ TextView signupBtn
+~ String emailPattern
+~ DBuser dBuser
+# void onCreate(Bundle)
+- void CheckDetails()
++ void openLoginDialog()
+- void findView()
+- void openDialog()
+- void openCamera()
+- void openGallery()
+# void onActivityResult(int,int,Intent)
++ void backTomain(View)
++ {static} byte[] imageViewToBy(ImageView)
++ void openLogin(View)
+- void sendSms(String,String,String)
+}
+class com.example.my_final_project.MainActivity {
+# void onCreate(Bundle)
++ void openSignup(View)
++ void openLogin(View)
+}
+class com.example.my_final_project.Info_Fragment {
+~ Button sandEmail
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void sandEmail(View)
+}
+class com.example.my_final_project.List_Fragment {
+~ LinearLayout main
+~ OrderHistory history
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void goAllView()
+- void addCard(String,String,String,String)
+}
+class com.example.my_final_project.ItemAdp {
+- Context context
+- int layout
+- ArrayList<getItem> arrayList
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.my_final_project.ItemAdp.ViewAOlder {
+~ ImageView image
+~ TextView name
+}
+class com.example.my_final_project.ShoppingList_Fragment {
+~ GridView gv
+~ ArrayList<getItem> arrayList
+~ ItemAdp adp
+~ OrdersDB ordersDB
+~ OrderHistory history
+~ int counter
+~ TextView tv_price
+~ Button endSopping
+~ Dialog ordersDialog
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- String showDate()
++ String time()
+- void openEndSopD(String)
++ void showDialogDelete(int)
+- void UpdateList()
+}
+class com.example.my_final_project.OrdersDB {
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
++ boolean insertOrdersData(String,String,String,byte[])
++ boolean itemExists(String)
++ Cursor getData(String)
++ void deleteProduct(String)
+}
+class com.example.my_final_project.getItem {
+- int id
+- String name
+~ int Unit
+- int price
+- byte[] image
++ int getUnit()
++ void setUnit(int)
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ int getPrice()
++ void setPrice(int)
++ byte[] getImage()
++ void setImage(byte[])
+}
+class com.example.my_final_project.HomePage {
++ {static} String getNaem
+~ TextView welcome
+~ ImageView userImage
+~ CardView cv
+~ Dialog dialog
+~ DBuser dBuser
++ {static} int REQUEST_CALL
+~ FloatingActionButton music
+~ MediaPlayer mp
+~ boolean isPlay
+~ SharedPreferences sp
+~ BottomNavigationView navigationView
+~ BroadcastReceiver broadcastReceiver
+# void onCreate(Bundle)
+- void showDate()
+- void showBattery()
+- void navItemSelector()
+- void playMusic()
++ void sandEmail(View)
++ void openMaps(View)
++ void openWhatsapp(View)
++ void findView()
++ void openMenuDialog(String)
++ void EmergencyCall()
++ void onRequestPermissionsResult(int,String[],int[])
++ void onBackPressed()
++ void showDialogExit()
++ void showDialogLogout()
+}
+class com.example.my_final_project.OrderHistory {
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
++ boolean insertData(String,String,String)
++ Cursor getAllData()
++ boolean isEmpty()
+}
+class com.example.my_final_project.splashScreen {
+~ SharedPreferences sp
+# void onCreate(Bundle)
++ void getFromSp()
+}
+class com.example.my_final_project.Forgot_Password {
+~ {static} String userName
+~ Dialog smsDialog
+~ DBuser dBuser
+~ TextView change_btn
+~ TextInputEditText changePassword
+# void onCreate(Bundle)
+- void changePassword()
+- int sendSms(String)
+- void findUser(String,int,String)
++ void backToLogin(View)
++ void onBackPressed()
++ void Exit()
+}
+class com.example.my_final_project.LoginPage {
+~ TextInputEditText loginUsername
+~ TextView loginBtn
+~ DBuser dBuser
+~ Dialog dialog
+~ CheckBox remember_me
+~ SharedPreferences sp
+~ boolean ch
+# void onCreate(Bundle)
+- void checker()
++ void openLoginDialog()
+- void findView()
++ void backToMain(View)
++ void openSignup(View)
+- BiometricPrompt getPrompt()
+- void notifyUser(String)
++ void onCheckedChanged(CompoundButton,boolean)
++ void setInSp(boolean,String)
+}
+class com.example.my_final_project.Home_Fragment {
+~ Dialog dialog
+~ OrdersDB ordersDB
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void findView0(View)
+- void findView1(View)
+- void findView2(View)
+- void findView3(View)
+- void openDialog(TextView,TextView,ImageView)
++ {static} byte[] imageViewToBy(ImageView)
+}
+class com.example.my_final_project.DBuser {
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
++ boolean insertData(String,String,String,byte[])
++ boolean ChecksInformation(String,String)
++ boolean IfUsernameExit(String)
++ Bitmap getImage(String)
++ String getPhoneNum(String)
++ String getPassword(String)
++ boolean updateProfile(String,String,String,byte[])
++ boolean userExit(String,String)
++ boolean updatePassword(String,String)
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.UpdatePage
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.SignupPage
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.MainActivity
+androidx.fragment.app.Fragment <|-- com.example.my_final_project.Info_Fragment
+androidx.fragment.app.Fragment <|-- com.example.my_final_project.List_Fragment
+android.widget.BaseAdapter <|-- com.example.my_final_project.ItemAdp
+com.example.my_final_project.ItemAdp +.. com.example.my_final_project.ItemAdp.ViewAOlder
+androidx.fragment.app.Fragment <|-- com.example.my_final_project.ShoppingList_Fragment
+android.database.sqlite.SQLiteOpenHelper <|-- com.example.my_final_project.OrdersDB
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.HomePage
+android.database.sqlite.SQLiteOpenHelper <|-- com.example.my_final_project.OrderHistory
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.splashScreen
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.Forgot_Password
+com.example.my_final_project.OnCheckedChangeListener <|.. com.example.my_final_project.LoginPage
+androidx.appcompat.app.AppCompatActivity <|-- com.example.my_final_project.LoginPage
+androidx.fragment.app.Fragment <|-- com.example.my_final_project.Home_Fragment
+android.database.sqlite.SQLiteOpenHelper <|-- com.example.my_final_project.DBuser
+@enduml

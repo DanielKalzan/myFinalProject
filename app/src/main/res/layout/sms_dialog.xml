@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/smsdback"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/det"
+        android:layout_width="150dp"
+        android:background="@drawable/dialog_background"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="27sp"
+        android:textColor="@color/black"
+        android:inputType="numberPassword"
+        android:hint="****"
+        android:textColorHint="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="אישור"
+        />
+
+
+</LinearLayout>

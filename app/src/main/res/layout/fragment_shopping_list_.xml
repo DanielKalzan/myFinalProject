@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/page_background"
+    tools:context=".ShoppingList_Fragment">
+
+
+
+
+   <GridView
+       android:layout_marginTop="10dp"
+       android:id="@+id/gridView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/rl"
+       android:gravity="center"
+       android:horizontalSpacing="6dp"
+       android:numColumns="auto_fit"
+       android:verticalSpacing="6dp" />
+
+
+   <RelativeLayout
+       android:id="@+id/rl"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:background="#EEEEEE">
+
+
+      <TextView
+          android:id="@+id/tv1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="מחיר לפני מיסים: "
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+      <TextView
+          android:id="@+id/tv_price"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toEndOf="@+id/tv1"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+      <TextView
+          android:id="@+id/tv2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_price"
+          android:layout_marginStart="18dp"
+          android:text="מיסים:"
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+      <TextView
+          android:id="@+id/tv_Taxes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_price"
+          android:layout_marginStart="5dp"
+          android:layout_toEndOf="@+id/tv2"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+      <TextView
+          android:id="@+id/tv3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_Taxes"
+          android:layout_marginStart="28dp"
+          android:layout_marginBottom="60dp"
+          android:text="סך הכל:"
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+      <TextView
+          android:id="@+id/tv_total"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_Taxes"
+          android:layout_marginStart="5dp"
+          android:layout_marginBottom="6dp"
+          android:layout_toEndOf="@+id/tv3"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="27sp" />
+
+
+      <Button
+          android:id="@+id/end_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="6dp"
+          android:background="@color/btn_background"
+          android:textColor="@color/page_background"
+          app:backgroundTint="@null"
+          android:text="סיום קניה"
+          android:textStyle="bold"/>
+
+   </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/nav_home"
+        android:title="חנות"
+        android:icon="@drawable/ic_home"/>
+
+
+
+    <item android:id="@+id/nav_shopp"
+        android:title="עגלת קניות"
+        android:icon="@drawable/ic_shopping_cart"/>
+
+    <item android:id="@+id/nav_list"
+        android:title="רשימת הזמנות"
+        android:icon="@drawable/ic_format_list"
+        />
+
+    <item android:id="@+id/nav_info"
+        android:title="מידע"
+        android:icon="@drawable/ic_info"/>
+
+
+
+
+
+
+
+
+
+</menu>

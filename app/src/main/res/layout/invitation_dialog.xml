@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="200dp"
+    android:background="#d2d2d2"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/close"
+        />
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_how_many_you_would_like_to_order"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/userOrder"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#A5A5A5"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/userOrder"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/Order"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#A5A5A5"
+        android:text="הזמן"/>
+
+
+</RelativeLayout>

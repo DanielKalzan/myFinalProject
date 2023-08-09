@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/page_background">
+
+    <TextView
+        android:id="@+id/tP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="מחיר סופי: "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/v"
+        />
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_below="@+id/v"
+        android:layout_toEndOf="@+id/tP"
+        />
+
+
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="54dp"
+        android:layout_height="4dp"
+        android:background="@drawable/dialog_background"
+        android:backgroundTint="#3D4143"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="9dp"
+        />
+
+    <com.braintreepayments.cardform.view.CardForm
+        android:id="@+id/card_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/totalPrice"
+        />
+
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Buy Now"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/card_form"
+        app:backgroundTint="@null"
+        android:background="@drawable/dialog_background"
+        android:backgroundTint="@color/btn_background"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

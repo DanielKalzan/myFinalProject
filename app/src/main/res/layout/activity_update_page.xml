@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    tools:context=".UpdatePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#1C658C">
+
+        <ImageView
+            android:id="@+id/back_to_Home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/hebrewfont"
+            android:text="ערוך פרופיל"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/signup_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="ערןך פרופיל"
+        android:textColor="@color/black"
+        android:textSize="33sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup_tv"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/editUserImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/add_user" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/black"
+            app:startIconTint="@color/black"
+            android:hint="@string/tel"
+            android:padding="15dp"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_phone"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie2_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/black"
+            app:startIconTint="@color/black"
+            android:hint="@string/password"
+            android:padding="15dp"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie3_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/black"
+            app:startIconTint="@color/black"
+            android:hint="@string/repeat_password"
+            android:padding="15dp"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie4_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/btn_background"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/edit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ערוך"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

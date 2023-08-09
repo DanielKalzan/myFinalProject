@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">גז דניאל</string>
+    <string name="password">סיסמה</string>
+    <string name="email">אימל</string>
+    <string name="user_name">שם משתמש</string>
+    <string name="sign_up_to_get_started">הירשם בשביל להתחיל</string>
+    <string name="repeat_password">אישור סיסמה</string>
+    <string name="login">התחברות</string>
+    <string name="forgot_your_password">שכחתי סיסמה</string>
+    <string name="remember_me">זכור אותי</string>
+    <string name="log_in_to_get_started">התחבר בשביל להתחיל</string>
+    <string name="Home">בית</string>
+    <string name="info">מידע</string>
+    <string name="Shopping_cart">עגלת קניות</string>
+    <string name="choose_how_many_you_would_like_to_order">בחר כמה תרצה להזמין</string>
+    <string name="tools_for_technicians">כלים לטכנאים</string>
+    <string name="exit">יציאה</string>
+    <string name="you_re_sure">אתה בטוח שאתה רוצה לצאת מהאפליקציה</string>
+    <string name="no">לא</string>
+    <string name="ok">כן</string>
+    <string name="welcome_to_daniel_gas_company">ברוך הבא לאפליקציה של חברת גז דניאל</string>
+    <string name="about">
+        חברת גז דניאל עושה הכל
+        על מנת להנגיש את האפליקציה ככל האפשר
+        לכל המשתמשים בדרך לעוד לקוח מרוצה.
+    </string>
+    <string name="Report">אם נמצאה בעיה כלשהי או שמשהו לא בסדר נשמח לשמוע עליה ולתקן אותה</string>
+    <string name="signup">הרשמה</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tel">מספר טלפון</string>
+
+
+</resources>
